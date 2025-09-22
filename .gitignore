@@ -3,7 +3,7 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
+.kiro
 # CDK
 cdk.out/
 cdk.context.json
@@ -58,3 +58,4 @@ secrets.json
 # Temporary files
 tmp/
 temp/
+
