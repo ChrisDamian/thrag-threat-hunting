@@ -1,0 +1,72 @@
+[
+  {
+    "name": "multi-stage-attack",
+    "description": "Lateral movement with credential harvesting",
+    "stages": [
+      {
+        "timestamp": "2025-10-01T17:38:16.506Z",
+        "event": "Initial Access",
+        "details": "Compromised user credentials via phishing",
+        "indicators": [
+          "unusual-login-location",
+          "failed-mfa-attempts"
+        ]
+      },
+      {
+        "timestamp": "2025-10-01T17:43:16.508Z",
+        "event": "Privilege Escalation",
+        "details": "AssumeRole operations to gain administrative access",
+        "indicators": [
+          "assume-role-abuse",
+          "policy-enumeration"
+        ]
+      },
+      {
+        "timestamp": "2025-10-01T17:53:16.508Z",
+        "event": "Lateral Movement",
+        "details": "EC2 instance compromise and network scanning",
+        "indicators": [
+          "network-anomalies",
+          "process-injection"
+        ]
+      },
+      {
+        "timestamp": "2025-10-01T18:03:16.508Z",
+        "event": "Data Exfiltration",
+        "details": "Large S3 data transfer to external IP",
+        "indicators": [
+          "data-transfer-anomaly",
+          "suspicious-destination"
+        ]
+      }
+    ],
+    "confidence": 0.94,
+    "severity": "critical"
+  },
+  {
+    "name": "insider-threat",
+    "description": "Malicious insider accessing sensitive data",
+    "stages": [
+      {
+        "timestamp": "2025-10-01T17:08:16.508Z",
+        "event": "Unusual Access Pattern",
+        "details": "Employee accessing data outside normal hours",
+        "indicators": [
+          "off-hours-access",
+          "unusual-data-volume"
+        ]
+      },
+      {
+        "timestamp": "2025-10-01T17:23:16.508Z",
+        "event": "Permission Escalation",
+        "details": "Attempting to access restricted resources",
+        "indicators": [
+          "access-denied-spikes",
+          "permission-enumeration"
+        ]
+      }
+    ],
+    "confidence": 0.76,
+    "severity": "high"
+  }
+]

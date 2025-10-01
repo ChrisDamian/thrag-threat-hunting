@@ -1,0 +1,39 @@
+[
+  {
+    "id": "ti-001",
+    "type": "apt-group",
+    "name": "Advanced Persistent Threat Group 1",
+    "description": "State-sponsored group targeting cloud infrastructure",
+    "ttps": [
+      "T1078",
+      "T1087",
+      "T1083",
+      "T1041"
+    ],
+    "iocs": [
+      "45.67.89.123",
+      "malicious-domain.com",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    "confidence": 0.89,
+    "last_seen": "2025-10-01T18:08:16.512Z"
+  },
+  {
+    "id": "ti-002",
+    "type": "malware-family",
+    "name": "CloudStealer",
+    "description": "Credential harvesting malware targeting AWS environments",
+    "ttps": [
+      "T1555",
+      "T1552",
+      "T1539"
+    ],
+    "iocs": [
+      "cloudstealer.exe",
+      "C:\\Windows\\Temp\\cs.tmp",
+      "HKEY_LOCAL_MACHINE\\SOFTWARE\\CloudConfig"
+    ],
+    "confidence": 0.92,
+    "last_seen": "2025-10-01T18:08:16.512Z"
+  }
+]

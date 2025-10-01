@@ -590,6 +590,5 @@ For support and questions:
 
 ---
 
-**Built with ❤️ for the cybersecurity community**
 
 *THRAG transforms cybersecurity from reactive to proactive by enabling AI systems to leverage the collective knowledge of the security community.*

@@ -1,0 +1,50 @@
+{
+  "scenarios": [
+    {
+      "id": "scenario-1",
+      "name": "Multi-Stage Attack Detection",
+      "description": "Demonstrate real-time detection of lateral movement",
+      "duration": 180,
+      "auto_play": true,
+      "steps": [
+        {
+          "timestamp": 0,
+          "action": "trigger_alert",
+          "data": {
+            "type": "suspicious_login",
+            "confidence": 0.87
+          }
+        },
+        {
+          "timestamp": 30,
+          "action": "agent_analysis",
+          "data": {
+            "reasoning": "Correlating with threat intelligence..."
+          }
+        },
+        {
+          "timestamp": 60,
+          "action": "recommend_action",
+          "data": {
+            "action": "isolate_instance",
+            "approval_required": false
+          }
+        },
+        {
+          "timestamp": 90,
+          "action": "execute_response",
+          "data": {
+            "success": true,
+            "rollback_available": true
+          }
+        }
+      ]
+    }
+  ],
+  "ui_settings": {
+    "theme": "dark",
+    "auto_refresh_interval": 2000,
+    "show_confidence_scores": true,
+    "enable_sound_alerts": false
+  }
+}
